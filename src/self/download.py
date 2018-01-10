@@ -20,11 +20,9 @@ def save_file(download_url, path):
         end_time = datetime.datetime.now()
         use_time = end_time - start_time
         file_size = os.path.getsize(path)/1024/1024
-        speed = file_size/use_time.total_seconds()[:4]
         print(str(end_time)[:-7])
         print(path + " Done ...")
         print("file size is " + str(file_size) + " MB ...")
-        print("speed is  " + str(speed) + " MB/s ...")
 
 def get_download_url(website_url):
     web_header = {'User-Agent':'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.6) Gecko/20091201 Firefox/3.5.6'}
